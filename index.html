@@ -22,6 +22,24 @@
             border-radius: 10px;
             margin-bottom: 20px;
         }
+        footer {
+            text-align: center;
+            background-color: #333;
+            /* Dunkler Hintergrund */
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .footer-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 100px;
+        }
+        footer address {
+            color: rgba(255, 165, 0, 0.8); /* Orange mit 70% Transparenz */
+            font-style: normal;          
+        }
 
         header h1 {
 
@@ -516,7 +534,18 @@
             </div>
         </div>
     </div>
-
+    <footer>
+        <div class="footer-container">
+            <div class="footer-item">
+                <address>
+                    Schwalbacher Straße 61 <br>
+                    65183 Wiesbaden<br>
+                    <strong>Öffnungszeiten:</strong><br>
+                    Montag bis Sonntag: 12:00 - 02:00 Uhr<br>
+                  </address>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
