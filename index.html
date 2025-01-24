@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 'N' Night</title>
+    <link rel="shortcut icon" href="assets/shishalogo.jpg" type="image/x-icon">
+    <style>
+        /* Styling für den Menü-Container */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #222;
+            /* Dunkler Hintergrund */
+        }
+
+        header {
+            text-align: center;
+            background-color: #333;
+            /* Dunkler Hintergrund */
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+
+            font-size: 4rem;
+            color: rgba(255, 165, 0, 0.8); /* Orange mit 70% Transparenz */
+        }
+
+        header img {
+            width: 100%;
+            max-width: 300px;
+            /* Bildergröße anpassen */
+            height: auto;
+            border-radius: 30%;
+            /* Abgerundete Ecken */
+            margin-bottom: 15px;
+        }
+
+        .menu-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+            background-color: #333;
+            /* Dunkler Hintergrund */
+            padding: 20px;
+            border-radius: 10px;
+            color: #fff;
+            /* Weiße Schrift */
+        }
+
+        @media screen and (max-width: 767px) {
+            .menu-container {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            }
+        }
+
+        /* Styling für die einzelnen Menü-Items */
+        .menu_item {
+            text-align: center;
+            background-color: #333;
+            /* Gleicher Hintergrund wie der Container */
+            border: 1px solid #555;
+            /* Leichte Umrandung */
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Styling der Überschriften */
+        .menu_item h3 {
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+            color: rgba(255, 165, 0, 0.8); /* Orange mit 70% Transparenz */
+            /* Gelbe Farbe als Akzent */
+        }
+
+        /* Styling der Bilder */
+        .menu_item img {
+            width: 100%;
+            max-width: 300px;
+            /* Bildergröße anpassen */
+            height: auto;
+            border-radius: 30%;
+            /* Abgerundete Ecken */
+            margin-bottom: 15px;
+        }
+
+
+        /* Styling für die Tabelle */
+        .table-container {
+            margin-top: 20px;
+        }
+
+        .table-container table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #333;
+            /* Gleicher Hintergrund */
+            color: #fff;
+            /* Weiße Schrift */
+        }
+
+        .table-container th,
+        .table-container td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #555;
+            /* Leichte Umrandung */
+        }
+
+        .table-container th {
+            background-color: #444;
+            font-weight: bold;
+        }
+
+        .table-container td {
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="assets/logo.jpg" alt="logo">
+        <h1>Menu</h1>
+    </header>
+    <div class="menu-container">
+        <div class="menu_item">
+            <h3>Heiße Getränke</h3>
+            <img src="assets/HotDrinks_1.jpg" alt="hot-drinks">
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Getränk</th>
+                            <th>Preis (€)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Kaffe</td>
+                            <td>2,50</td>
+                        </tr>
+                        <tr>
+                            <td>Espresso</td>
+                            <td>2,50</td>
+                        </tr>
+                        <tr>
+                            <td>Tee (verschiedene Sorten)</td>
+                            <td>2</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="menu_item">
+            <h3>Alkoholfreie Getränke</h3>
+            <img src="assets/SoftDrinks.jpg" alt="soft-drinks">
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Getränk</th>
+                            <th>Inhalt (Liter)</th>
+                            <th>Preis (€)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Stilles Wasser</td>
+                            <td>0,25</td>
+                            <td>2,50</td>
+                        </tr>
+                        <tr>
+                            <td>Mineralwasser</td>
+                            <td>0,25</td>
+                            <td>2,50</td>
+                        </tr>
+                        <tr>
+                            <td>Coca Cola</td>
+                            <td>0,33</td>
+                            <td>2,50</td>
+                        </tr>
+                        <tr>
+                            <td>Fanta</td>
+                            <td>0,33</td>
+                            <td>2,50</td>
+                        </tr>
+                        <tr>
+                            <td>7Up</td>
+                            <td>0,33</td>
+                            <td>2,50</td>
+                        </tr>
+                        <tr>
+                            <td>Bitter Lemon</td>
+                            <td>0,20</td>
+                            <td>2,50</td>
+                        </tr>
+                        <tr>
+                            <td>Red Bull</td>
+                            <td>0,25</td>
+                            <td>3,50</td>
+                        </tr>
+                        <tr>
+                            <td>Ice Tee</td>
+                            <td>0,33</td>
+                            <td>3,50</td>
+                        </tr>
+                        <tr>
+                            <td>Orangensaft</td>
+                            <td>0,25</td>
+                            <td>2,50</td>
+                        </tr>
+                        <tr>
+                            <td>Ananassaft</td>
+                            <td>0,25</td>
+                            <td>2,50</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="menu_item">
+            <h3>Biere</h3>
+            <img src="assets/Biere.jpg" alt="Biere">
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Getränk</th>
+                            <th>Inhalt (Liter)</th>
+                            <th>Preis (€)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Becks</td>
+                            <td>0,33</td>
+                            <td>2,50</td>
+                        </tr>
+                        <tr>
+                            <td>Bitburger</td>
+                            <td>0,33</td>
+                            <td>2,50</td>
+                        </tr>
+                        <tr>
+                            <td>Heineken</td>
+                            <td>0,25</td>
+                            <td>3,50</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="menu_item">
+            <h3>Weine / Sekt</h3>
+            <img src="assets/Wine_Sekt.jpg" alt="Weine/Sekt">
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Getränk</th>
+                            <th>Inhalt (Liter)</th>
+                            <th>Preis (€)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Weisswein</td>
+                            <td>0,20</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>Rotwein</td>
+                            <td>0,2</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>Sekt</td>
+                            <td>0,25</td>
+                            <td>5</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="menu_item">
+            <h3>Longdrinks</h3>
+            <p>mit 4 cl Alk.</p>
+            <img src="assets/Longdrinks.jpg" alt="Longdrinks">
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Getränk</th>
+                            <th>Inhalt (Liter)</th>
+                            <th>Preis (€)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Vodka(Absolut) / Orange</td>
+                            <td>0,20</td>
+                            <td>7,50</td>
+                        </tr>
+                        <tr>
+                            <td>Vodka(Absolut) / Red Bull</td>
+                            <td>0,25</td>
+                            <td>8</td>
+                        </tr>
+                        <tr>
+                            <td>Gin / Lemon</td>
+                            <td>0,20</td>
+                            <td>7,50</td>
+                        </tr>
+                        <tr>
+                            <td>Jim Beam / Cola</td>
+                            <td>0,20</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>Johnnie Walker (Red) / Cola</td>
+                            <td>0,2</td>
+                            <td>7,50</td>
+                        </tr>
+                        <tr>
+                            <td>Jack Daniels / Cola</td>
+                            <td>0,20</td>
+                            <td>7,50</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="menu_item">
+            <h3>Coganc</h3>
+            <img src="assets/Coganc.jpg" alt="cognac">
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Getränk</th>
+                            <th>Inhalt (cl)</th>
+                            <th>Preis (€)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Hennessy V.S.</td>
+                            <td>2</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>Remy Martin VSOP</td>
+                            <td>2</td>
+                            <td>5,50</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="menu_item">
+            <h3>Spirituosen</h3>
+            <img src="assets/Spirituosen.jpg" alt="Spirituosen">
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Getränk</th>
+                            <th>Inhalt (cl)</th>
+                            <th>Preis (€)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Averna</td>
+                            <td>2</td>
+                            <td>2,50</td>
+                        </tr>
+                        <tr>
+                            <td>Ramazzotti</td>
+                            <td>2</td>
+                            <td>2,50</td>
+                        </tr>
+                        <tr>
+                            <td>Fernet Branca</td>
+                            <td>2</td>
+                            <td>2,50</td>
+                        </tr>
+                        <tr>
+                            <td>Jägermeister</td>
+                            <td>2</td>
+                            <td>2,50</td>
+                        </tr>
+                        <tr>
+                            <td>Baileys</td>
+                            <td>2</td>
+                            <td>2,50</td>
+                        </tr>
+                        <tr>
+                            <td>Vodka Absolut</td>
+                            <td>2</td>
+                            <td>2,50</td>
+                        </tr>
+                        <tr>
+                            <td>Gin Eombay Saphire</td>
+                            <td>2</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>Tequila</td>
+                            <td>2</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>Arak</td>
+                            <td>4</td>
+                            <td>4</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="menu_item">
+            <h3>Whiskey</h3>
+            <img src="assets/Whiskies.jpg" alt="Whiskey">
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Getränk</th>
+                            <th>Inhalt (cl)</th>
+                            <th>Preis (€)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Johnnie Walker Red</td>
+                            <td>2</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>Jim Beam</td>
+                            <td>2</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>Jack Daniels</td>
+                            <td>2</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>Chivas Regal</td>
+                            <td>2</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>Johnnie Walker Black</td>
+                            <td>2</td>
+                            <td>4</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="menu_item">
+            <h3>Shisha</h3>
+            <img src="assets/Shisha_1.jpg" alt="shisha">
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Aroma</th>
+                            <th>Preis (€)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Apfel</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>Falim</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>Trauben</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>Minze</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>Zitrone</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>Orange</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>Papa Luma</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>Für andere Aromen (Bitte Anfrage)</td>
+                            <td>10</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
